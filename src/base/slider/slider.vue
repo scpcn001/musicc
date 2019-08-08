@@ -51,7 +51,7 @@ export default {
                 return
             }
             clearTimeout(this.resizeTimer)
-            this,resizeTimer=setTimeout(()=>{
+            this.resizeTimer=setTimeout(()=>{
                 if(this.slider.isIntransition){
                     this._onScrollEnd()
                 }else{
@@ -81,10 +81,10 @@ export default {
         clearTimeout(this.timer)
     },
     methods:{
-        refersh(){
+        refresh(){
             if(this.slider){
                 this._setSliderWidth(true)
-                this.slider.refersh()
+                this.slider.refresh()
             }
         },
         _setSliderWidth(isResize){
